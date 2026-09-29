@@ -19,4 +19,8 @@ jobs:
               with:
                 path: ~/.npm
                 key: npm-${{ hashFiles('package-lock.json') }}
+            - uses: actions/upload-pages-artifact@v4
+              with:
+                path: dist/
+            - uses: actions/deploy-pages@v5
             - run: echo "Hello World"
