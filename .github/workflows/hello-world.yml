@@ -12,7 +12,7 @@ jobs:
             # Installer un environnement Node.js
             - uses: actions/setup-node@v7
               with:
-                node-version: 24.18.0
+                node-version: 25.3.0
             # Mettre en cache des dépendances
             - uses: actions/cache@v5
               with:
