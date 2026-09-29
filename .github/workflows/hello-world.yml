@@ -7,9 +7,9 @@ on:
 
 jobs:
     hello:
-        runs-on: windows
+        runs-on: ubuntu-latest
         steps:
-                        # Récupérer le code
+            # Récupérer le code
             - uses: actions/checkout@v7
             # Installer un environnement Node.js
             - uses: actions/setup-node@v7
