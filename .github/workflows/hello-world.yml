@@ -5,8 +5,20 @@ on:
 
 jobs:
     hello:
-        runs-on: ubuntu-latest
+        runs-on: windows
         steps:
+            # Récupérer le code
+            - uses: actions/checkout@v7
+            # Installer un environnement Node.js
+            - uses: actions/setup-node@v7
+              with:
+                node-version: 24.18.0
+            # Mettre en cache des dépendances
+            - uses: actions/cache@v5
+              with:
+                path: ~/.npm
+                key: npm-${{ hashFiles('package-lock.json') }}
+
             # Actions qui permet de récupérer le code associé à la branche de l'événement
             - uses: actions/checkout@v7
             - run: echo "Hello World"
