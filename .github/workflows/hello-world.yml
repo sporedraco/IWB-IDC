@@ -1,0 +1,11 @@
+# Meta data du workflow
+name: Hello World
+# Événement Déclancher
+on:
+push:
+# Travaille a effectué
+jobs:
+hello:
+runs-on: windows
+steps:
+- run: echo "Hello World"
