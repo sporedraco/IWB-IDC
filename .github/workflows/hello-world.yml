@@ -4,8 +4,8 @@ on:
     push:
 
 jobs:
-    hello:
-        runs-on: windows
+    test:
+        runs-on: windows 11
         steps:
             # Récupérer le code
             - uses: actions/checkout@v7
